@@ -1,0 +1,14 @@
+# ignore all node_modules
+**/node_modules/
+
+# ignore static and/or generated files
+dist/
+
+# Ignore newrelic.js for local testing
+newrelic.js
+
+# Ignore directory with jenkins tooling
+service-build/
+
+# test files (for now)
+src/*.test.*

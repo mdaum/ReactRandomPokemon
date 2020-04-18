@@ -10,11 +10,24 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
+  "devDependencies": {
+    "eslint": "^4.12.1",
+    "eslint-config-semistandard": "^11.0.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-dependencies": "^2.4.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.3.0",
+    "eslint-plugin-standard": "^3.0.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "fix": "eslint --fix",
+    "fix-all": "eslint --fix .",
+    "lint": "eslint ."
   },
   "eslintConfig": {
     "extends": "react-app"
