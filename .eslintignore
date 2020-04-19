@@ -2,7 +2,7 @@
 **/node_modules/
 
 # test files (for now)
-src/*.test.tsx
+src/__tests__/
 
-#serviceWorker (fornow
-src/serviceWorker.ts
+#Unused Boilerplate
+src/unusedBoilerPlate/

@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "@types/jest": "^24.0.0",
@@ -19,8 +18,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test-ci": "cross-env CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "eslint . --ext ts --cache --max-warnings 0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run test-ci",
+      "pre-push": "npm run lint && npm run test-ci"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,7 +44,10 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
     "@typescript-eslint/eslint-plugin": "^2.28.0",
-    "@typescript-eslint/parser": "^2.28.0"
+    "@typescript-eslint/parser": "^2.28.0",
+    "cross-env": "^7.0.2",
+    "husky": "^4.2.5"
   }
 }
