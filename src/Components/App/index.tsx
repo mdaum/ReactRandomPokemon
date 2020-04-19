@@ -1,24 +1,34 @@
 import React from 'react';
-import logo from '../../resources/logo.svg';
+import pikachu from '../../resources/pikachu.gif';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
+        <h1>
+          Welcome to my Random Pokemon React Project!
+        </h1>
+        <img src={pikachu} className="App-logo" alt="logo" />
+      </header>
+      <footer className="App-footer">
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://pokeapi.co/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          This project uses pokeapi
         </a>
-      </header>
+        <a
+          className="App-link"
+          href="https://github.com/mdaum/ReactRandomPokemon"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Github Repo
+        </a>
+      </footer>
     </div>
   );
 }
